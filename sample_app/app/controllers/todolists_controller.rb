@@ -8,7 +8,7 @@ class TodolistsController < ApplicationController
     def create
         list = List.new(list_params)
         list.save # データベースへ保存する
-  
+
         redirect_to todolist_path(list.id) # 詳細画面へリダイレクト
       end
     def index
